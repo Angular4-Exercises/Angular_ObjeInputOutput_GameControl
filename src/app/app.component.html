@@ -1,0 +1,19 @@
+ <!-- <app-game-control  [GamePlayers]='GamePlayers' (GameWork)="receivedStatus($event)" > </app-game-control> -->
+
+ <app-game-control (GameWork)="receivedStatus($event)" > 
+  
+</app-game-control>
+<p>
+ ReceivedCount : {{recievedCount}}
+ 
+</p>
+
+
+<div class="col-xs-12" *ngFor='let evenNumber of evennumbersArray'>
+   <app-even  [recievedCount]="evenNumber" ></app-even>
+</div>
+
+
+<div class="col-xs-12" *ngFor='let oddNumber of oddnumbersArray'>
+   <app-odd  [recievedCount]="oddNumber" ></app-odd>
+</div>
